@@ -27,25 +27,26 @@ public class Prueba {
         libretaReporte.setNumeroCuenta("1");
         libretaReporte.setNumeroSocio("1");
 
-        RegistrosLibreta registrosLibreta = new RegistrosLibreta();
-
         for (int i = 0; i < 5; i++) {
-            registrosLibreta.setFechaRegistro(new Date("01/02/2014"));
-            registrosLibreta.setDeposito(255.25);
-            registrosLibreta.setRetiros(255.25);
-            registrosLibreta.setSaldo(100);
-            registrosLibreta.setCodigo("DEP-EFE");
+            RegistrosLibreta registrosLibreta = new RegistrosLibreta();
+            registrosLibreta = null;
+            collection1.add(registrosLibreta);
         }
 
-        RegistrosLibreta registrosLibreta1 = new RegistrosLibreta();
-        registrosLibreta1.setFechaRegistro(new Date("01/02/2014"));
-        registrosLibreta1.setDeposito(0.0);
-        registrosLibreta1.setRetiros(255.25);
-        registrosLibreta1.setSaldo(100);
-        registrosLibreta1.setCodigo("DEP-EFE");
+        RegistrosLibreta registrosLibretaLast = new RegistrosLibreta();
+        registrosLibretaLast.setFechaRegistro(new Date("01/02/2014"));
+        registrosLibretaLast.setRetiros(990.0);
+        registrosLibretaLast.setSaldo(100);
+        registrosLibretaLast.setCodigo("RET-EFE");
+        collection1.add(registrosLibretaLast);
 
-        collection1.add(registrosLibreta);
-        collection1.add(registrosLibreta1);
+        RegistrosLibreta registrosLibretaLast1 = new RegistrosLibreta();
+        registrosLibretaLast1.setFechaRegistro(new Date("01/02/2014"));
+        registrosLibretaLast1.setDeposito(5000.10);
+        registrosLibretaLast1.setSaldo(20000.00);
+        registrosLibretaLast1.setCodigo("DEP-EFE");
+        collection1.add(registrosLibretaLast1);
+
         libretaReporte.setListaRegistrosLibreta(collection1);
         collection.add(libretaReporte);
 

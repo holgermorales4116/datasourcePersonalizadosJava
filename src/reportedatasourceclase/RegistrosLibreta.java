@@ -26,9 +26,9 @@ public class RegistrosLibreta {
     public RegistrosLibreta() {
         numRegistro = 0;
         fechaRegistro = null;
-        deposito = null;
-        retiros = null;
-        saldo = null;
+        deposito = 0.0;
+        retiros = 0.0;
+        saldo = 0.0;
         codigo = null;
         imprimir = 'N';
 
